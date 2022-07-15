@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Link from 'next/Link';
+import Link from 'next/link';
 import { VscChevronRight, VscChevronDown} from "react-icons/vsc";
 import {useAPI, useModal, useScreenWidth } from "../hooks";
 import { StylesContext } from './StylesContext';

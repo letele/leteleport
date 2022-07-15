@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/Link'
+import Link from 'next/link'
 import {Footer, Icons, StylesContext, ThemeModal} from '../components'
 import { fetchContent } from '../utils'
 

@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import {useAPI} from "../hooks"
 const Nav = ({val}) => {
     const url = "https://letele.github.io/content.json"
