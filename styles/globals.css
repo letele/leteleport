@@ -1,16 +1,310 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root{
+  --layout-hh:36px;
+  --layout-fh:24px;
+  --layout-hhfh:calc(var(--layout-hh) + var(--layout-fh));
+  --layout-sh:calc(100vh - var(--layout-hhfh));
 }
 
-a {
+html,
+body,
+* {
+  padding: 0; margin: 0;
+}
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+a{
   color: inherit;
   text-decoration: none;
 }
+header img{
+  border-radius:50%; 
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0.3em;
+  width: fit-content;
+  font-size: 0.9em;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+#home{
+  padding: 1em;
+  height:100vh;width: 100vw;
+}
+#home header{
+  position:relative; 
+  width:fit-content;
+  height: fit-content;
+}
+#home header li{
+  position: absolute;
+}
+#home #colors-icon:hover { 
+  cursor:default;
+}
+#home #colors-icon{
+  left:100%; top:0; 
+}
+#home #twitter-icon{ 
+  right:0; bottom:0; 
+}
+#home #github-icon{ 
+  left:0; top:100%; 
+}
+#home nav{
+  width: 7.5em;
+  margin-left: 7.5em;
+  text-align: center;
+  font-size:1em;
+}
+#home nav li,
+#home footer{ 
+  margin-top: 0.7em;
+}
+#home footer{
+  width: 9.35em;
+  margin-left: 9.4em;
+  font-size:0.8em;
+  text-align: center;
+}
 
-* {
-  box-sizing: border-box;
+
+#layout header{
+  height: var(--layout-hh);
+  gap: 0.3em;
+  padding:0.5em 0.7em;
+  font-size: 0.9em;
+}
+#layout header #icons{
+  margin-left: auto;
+  gap: 0.9em;
+}
+.desktop-nav-li{
+  position: relative;
+}
+.desktop-nav-li ul{
+  position: absolute;
+  min-width: 150px;
+  padding-top: 0.3em;
+  padding-right: 0.3em;
+  margin-top: 0.3em;
+  white-space: nowrap;
+  z-index: 1;
+}
+.desktop-nav-li ul li{
+  margin-bottom: 0.3em;
+  padding-left: 0.5em;
+}
+.desktop-nav-li ul li:hover{
+  color: #00000048;
+}
+#mobile-nav{
+  position: relative;
+}
+#mobile-navlist{
+  position: absolute;
+  padding-top: 0.3em;
+  top: 120%;
+  z-index: 1;
+  padding-right: 1em;
+}
+#mobile-navlist ul{
+  white-space: nowrap;
+  margin-top: 0.3em;
+  margin-left: 1em;
+}
+#mobile-nav li{
+  margin-bottom: 0.3em;
+}
+
+
+#layout section{
+  height: var(--layout-sh);
+  overflow-y: auto;
+  padding: 0.5em;
+  font-size: 1em;
+}
+#section-article,
+#section-nav,
+#section-list{
+  margin: 0.5em;
+}
+#layout section  p{
+  margin: 0.5em;
+  max-width: 510px;
+}
+#section-article ul,
+#section-article ol{
+  max-width: 510px;
+  margin: 0 0.5em;
+  margin-left: 0.5em;
+}
+#section-article ul li,
+#section-article ol li{
+  margin-bottom: 0.3em;
+}
+#section-article .image{
+  margin-left: 1em;
+}
+#layout section>ul>li{
+  width: fit-content;
+  margin-bottom: 0.3em;
+}
+#layout section>ul ul{
+  margin-left: 0.5em;
+}
+#layout section>ul ul li{
+  margin-bottom: 0.3em;
+  width: fit-content;
+}
+#layout section>ul ul li a{
+  gap: 0.3em;
+}
+#layout section>ul>li:hover{
+  cursor: default;
+}
+#layout section>ul>li >*{
+  gap: 0.3em;
+}
+
+#section-list>div{
+  margin-left: 0.5em;
+}
+#section-list>div>li{
+  width: fit-content;
+  margin-bottom: 0.5em;
+}
+#section-list>div>li:hover{
+  cursor: default;
+}
+#section-list>div>li>span{
+  gap: 0.3em;
+}
+#section-list>div ul{
+  margin-left: 2em;
+  width: fit-content;
+}
+#section-list>div>ul li{
+  margin-bottom: 0.3em;
+}
+#section-list>div>ul p{
+  margin: 0.3em;
+}
+#section-list>div>ul span{
+  margin-right: 0.5em;
+}
+#layout footer{
+  height: var(--layout-fh);
+  font-size: 0.75em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5em;
+}
+
+
+#theme-modal{
+  background: #00000046;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#theme-form{
+  width: 192px;
+  height: 150px;
+  font-size: 0.9em;
+}
+#home #theme-form{
+  margin: 1em;
+}
+#layout #theme-form{
+  margin-left: auto;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+#theme-modal #form-header{
+  justify-content: space-between;
+  padding:0 0.3em;
+  height: 20px;
+}
+#theme-modal #form-header svg:last-child:hover{
+  background: #ff7777;
+  color: #ddd;
+}
+#theme-modal #form-section{
+  padding: 0.5em;
+  height: 100px;
+}
+.row{
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+.row:hover{
+  cursor: default;
+}
+#form-section .row>div:first-child{
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.3em;
+}
+#form-section .row>div:nth-child(2){
+  position: relative;
+}
+#form-section #select{
+  width: 57%;
+}
+#font #select #title{
+  justify-content: space-between;
+  padding-left:  0.3em;
+}
+#form-section #options {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 0.2em;
+}
+#form-section #options div{
+  margin-bottom: 0.2em;
+}
+#form-section #options div:last-child{
+  margin-bottom: 0;
+}
+#form-footer{
+  padding-right: 1em;
+  text-align: right;
+  height: 30px;
+  justify-content: end;
+  gap: 0.9em;
+}
+#form-footer button{
+  font-size: 0.8em;
+  color: #383838;
+  padding: 0.3em 0.5em;
+  border: none;
+  width: 30%;
+}
+#form-footer #btn-apply:hover{
+  border: 1px solid #6abedf;
+}
+#form-footer #btn-cancel:hover{
+  border: 1px solid #ff7777;
+}
+
+/* Scrollbar  */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

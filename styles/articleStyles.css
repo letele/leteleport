@@ -1,0 +1,115 @@
+
+#section-article p{
+    padding-left: 0.5em;
+}
+#section-article h3{
+    margin-left: 0.5em;
+}
+#section-article h4{
+    margin-left: 1em;
+}
+#section-article .link{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.8em;
+}
+#section-article .link span{
+    background: #dadada;
+    color: #464646;
+    padding: 0.3em 0.6em;
+    border-radius: 10px;
+}
+.article-list,.article-ol-list{
+    padding-left: 2em;
+}
+.article-list li{
+    list-style: disc;
+}
+.article-ol-list li{
+    list-style: decimal;
+}
+
+#section-article .pl-10{
+    padding-left: 1em;
+}
+
+/* refi */
+#venn-diagram{
+    width: 15em;
+    height: 9em;
+    margin: 1em;
+    position: relative;
+}
+#venn-diagram .cirlce{
+    position: absolute;
+    top: 1em;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+}
+#venn-diagram .cirlce:nth-child(1){
+    left: 2em;
+}
+#venn-diagram .cirlce:nth-child(2){
+    right: 2em;
+}
+#venn-diagram span{
+    position: absolute;
+    font-size: 0.8em;
+    top: 1em;
+}
+#venn-diagram #refi{
+    top: 4.7em; left: 8.5em;
+}
+#venn-diagram #react,
+#venn-diagram #firebase
+{
+    top: 1.7em;
+    font-size: 2em;
+}
+#venn-diagram #react{
+    left: 1.5em;
+    color:  #61dbfb;
+    height: 1em;
+    animation:spin 20s infinite linear;
+}
+
+#venn-diagram #firebase{
+    right: 1.5em;
+    color: #FFA611;
+	animation: float 3s ease-in-out infinite;
+}
+#venn-diagram #backend{
+    right: 0.3em;
+}
+#venn-diagram #frontend{
+    left: 0.1em;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes float {
+	0% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(-0.1em);
+	}
+	100% {
+		transform: translatey(0);
+	}
+}
+
+
+/* Dejavu */
+#section-article blockquote{
+    margin: 0.5em;
+    margin-left: 1em;
+    width: fit-content;
+}
+#section-article blockquote>div:last-child{
+    text-align: right;
+}

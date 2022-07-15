@@ -1,7 +1,10 @@
+import { withStylesContext } from '../components'
 import '../styles/globals.css'
+import '../styles/articleStyles.css'
+
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default withStylesContext(MyApp)
